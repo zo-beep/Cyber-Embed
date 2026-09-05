@@ -1,0 +1,33 @@
+#ifndef __CONFIG_MENU_H__
+#define __CONFIG_MENU_H__
+
+#include <MenuItemInterface.h>
+
+class ConfigMenu : public MenuItemInterface {
+public:
+    ConfigMenu() : MenuItemInterface("Config") {}
+
+    void optionsMenu(void);
+    void drawIcon(float scale);
+    const char *getCategory() const override { return "CORE CONFIG"; }
+    const char *getDescription() const override { return "System Settings"; }
+    bool hasTheme() { return bruceConfig.theme.config; }
+    const String &themePath() override { return bruceConfig.theme.paths.config; }
+
+private:
+    // Submenus
+    void displayUIMenu(void);
+    void ledMenu(void);
+    void audioMenu(void);
+    void systemMenu(void);
+    void advancedMenu(void);
+    void powerMenu(void);
+    void pinsMenu(void);
+    void devMenu(void);
+
+    // Helper methods for complex operations
+    void switchToUSBSerial(void);
+    void switchToUARTSerial(void);
+};
+
+#endif
