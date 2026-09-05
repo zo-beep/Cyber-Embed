@@ -43,6 +43,7 @@ While Bruce created the ultimate multi-radio swiss-army knife for ESP32 devices 
                                       │
                                       ▼
                         UI 2.0 TACTICAL FINDINGS HUD
+```
 
 1. Tactical Console UI 2.0
 Purpose-Built for 320×170: Strict layout zoning (Header, Content Safe Area, Action Footer) designed for high information density and single-detent rotary encoder navigation.
@@ -97,3 +98,4 @@ pio run -e lilygo-t-embed-cc1101 -t upload
 Base Firmware: Derived from Bruce under GPLv3.
 Special Thanks: @pr3y and the Bruce developer community for their incredible hardware support and RF libraries.
 Disclaimer: This tool is designed strictly for authorized security research, educational audits, and defensive RF monitoring.
+
